@@ -1,0 +1,111 @@
+.advantage{
+    display: flex;
+    flex-direction: column;
+    // padding: rem(100px) 0;
+    height: 100vh;
+    min-height: rem(650px);
+}
+
+.container--advantage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.advantage__preview{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding: 0 18%;
+    padding-top: rem(100px);
+    margin-bottom: rem(62px);
+
+    .advantage__title{
+        margin-bottom: rem(18px);
+    }
+
+    @include tablets{
+        padding: 0 12%;
+        margin-bottom: rem(53px);
+    }
+
+    @include phones{
+        padding: 0 10%;
+        // margin-bottom: rem(53px);
+    }
+}
+
+.advantage__list{
+    display: flex;
+    text-align: center;
+
+    @include phones{
+        flex-direction: column;
+    }
+}
+
+.advantage__item{
+    flex: 1;
+    position: relative;
+    padding: 0 4%;
+
+    &::before{
+        position: absolute;
+        content: url(../image/advantage/decor.svg);
+        top: rem(62px);
+        right: 0;
+        transform: translate(50%);
+        
+        @include tablets{
+            display: none;
+        }
+    }
+    
+    &:last-child{
+        padding-right: rem(0px);
+
+        &::before{
+            display: none;
+        }
+    }
+
+    &:first-child{
+        padding-left: rem(0px);
+    }
+
+    @include phones{
+        display: flex;
+        align-items: center;
+        text-align: start;
+        padding: 0;
+        margin-bottom: rem(31px);
+    }
+}
+
+.advantage__item-img{
+    display: flex;
+    width: rem(128px);
+    height: rem(128px);
+    border-radius: 50%;
+    background: #F2F5F4;   
+    text-align: center;
+    margin: 0 auto rem(24px);
+    padding: rem(30px); 
+    flex-shrink: 0;
+
+    &-margin{
+        height: 100%;
+        width: 100%; 
+    }
+    
+    @include phones {
+        margin-right: rem(12px);
+        margin-bottom: 0;
+    }
+}
+
+.advantage__text-title{
+    margin-bottom: rem(7px);
+}

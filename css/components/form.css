@@ -1,0 +1,106 @@
+.inner-form {
+  background: #181818;
+}
+
+.form-text {
+  font-family: Play;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #fff;
+}
+
+.form__title {
+  color: #fff;
+  text-align: center;
+  margin-right: auto;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.form__input {
+  min-height: 58px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  Flex-shrink: 0;
+  margin-right: 30px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  background: #FFFFFF;
+  padding: 21px 30px;
+  font-size: 18px;
+  color: #1A1B1E;
+}
+
+.form__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: 27px;
+  max-width: 460px;
+}
+.form__info .form__info-contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 460px;
+}
+.form__info .form__info-contact .info-contact__name {
+  min-width: 48%;
+  margin-right: 17px;
+  max-width: 100%;
+}
+.form__info .form__info-contact .info-contact__phone {
+  min-width: 48%;
+}
+.form__info .form__info-street {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.form__info .form__info-street .form__input {
+  width: 100%;
+}
+.form__info .form__info-place {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.form__info .form__info-place .form__info-place-house {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  max-width: 105px;
+  margin-right: 14px;
+}
+.form__info .form__info-place .form__info-place-house:last-child {
+  margin-right: 0px;
+}
+.form__info .form__info-place .form__info-place-house .form__input {
+  max-width: 100%;
+}
+
+.form__other {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 450px;
+}
+.form__other .form__input--textarea {
+  max-width: 100%;
+  max-height: 152px;
+}

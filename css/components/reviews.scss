@@ -1,0 +1,133 @@
+.reviews{
+    padding: rem(64px) rem(79px);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 100vh;
+    min-height: rem(650px);
+    background-color: #fff;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+
+    @include tablets {
+        justify-content: center;
+        padding: 0 10px;
+    }
+}
+
+.reviews__title{
+    margin-bottom: rem(32px);
+
+    @include tablets {
+        margin-bottom: 0;
+    }
+}
+
+.reviews__item{
+    position: relative;
+    background: #F8FAF9;
+    display: flex;
+    padding: rem(42px);
+    align-items: center;
+    margin-bottom: rem(15px);
+    overflow: hidden;
+
+    &::before{
+        content: "";
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: rem(-65px);
+        transform: translate(-50%);
+        width: rem(83px);
+        height: rem(83px);
+        border-radius: 50%;
+        background-color: #fff;
+    }
+
+    @include tablets {
+        flex-direction: column;
+        padding: rem(55px) rem(23px);
+        text-align: center;
+    }
+}
+
+.reviews__item-avatar{
+    margin-right: rem(40px);
+    width: rem(253px);
+    height: rem(253px);
+
+    @include tablets {
+        width: 130px;
+        height: 130px;
+        margin-right: 0;
+        margin-bottom: 32px;
+    }
+}
+
+.reviews__item-text{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    max-width: rem(500px);
+    
+    @include tablets {
+        text-align: center;
+        max-width: 100%;
+    }
+}  
+
+.text__title{
+    margin-bottom: rem(27px);
+}
+
+.text__desc{
+    margin-bottom: rem(38px);
+}
+
+//users
+
+.reviews-users__list{
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.reviews-users__item{
+    margin-right: rem(6px);
+
+    &:last-child{
+        margin-right: 0;
+    }
+}
+
+.interactive__avatar{
+    width: rem(74px);
+    height: rem(74px);
+    border: rem(4px) solid transparent;
+    border-radius: 50%;
+    overflow: hidden;
+
+    &:hover{
+        border: rem(2px) solid red;
+    }
+
+    &--active{
+        border-color: #E01F3D;
+
+        &:hover{
+            border: rem(4px) solid #E01F3D;
+        }
+    }
+
+    
+}
+
+.interactive__avatar-img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

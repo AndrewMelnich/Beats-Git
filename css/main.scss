@@ -1,0 +1,28 @@
+$containerWidth: 940px;
+$baseFontsSize: 16px;
+
+//colors
+$colorRed: #E01F3D;
+
+//breakpoints
+
+$tablets: 768px;
+$phones: 480px;
+
+@import "components/media.scss";
+
+//z-inexes
+$z-fixed-menu: 100;
+
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&display=swap');
+
+// components
+@import "components/base.scss";
+@import "components/_header.scss";
+@import "components/preview.scss";
+@import "components/advantage.scss";
+@import "components/reviews.scss";
+@import "components/form.scss";
+@import "components/fixed-menu.scss";
