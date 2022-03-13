@@ -10,6 +10,29 @@
     @include tablets{
         background-image: none;
     }
+
+    &::after{
+        content: "";
+        width: 46px;
+        height: 10px;
+        background-color:  #C4C4C4;
+        position: absolute;
+        right: 10%;
+        bottom: 0;
+        transform: rotate(-45deg);
+    }
+
+    // &::after{
+    //     content: "";
+    //     width: 24px;
+    //     height: 24px;
+    //     position: absolute;
+    //     bottom: -200%;
+    //     right: 10%;
+
+    //     background: #292929;
+    //     transform: rotate(29.11deg);
+    // }
 }
 
 .container--preview{

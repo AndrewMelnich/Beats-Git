@@ -11,7 +11,16 @@
         display: flex;
         align-items: flex-start;
     }
+
+    @include tablets{
+        align-items: center;
+    }
+
+    @include phones{
+        align-items: center;
+    }
 }
+
 
 .header__col .contacts__header{
     @include tablets {

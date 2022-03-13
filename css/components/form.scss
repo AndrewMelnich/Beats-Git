@@ -10,7 +10,34 @@
     @include tablets {
         display: flex;
         justify-content: center;
-    }
+    }    
+}
+
+.inner-form-decor{
+    position: absolute;
+    bottom: -202%;
+    right: 5%;  
+    transform: rotate(-15deg);
+
+}
+
+.pentagon {
+    position: relative;
+    width: 80px;
+    border-width: 40px 16px 0;
+    border-style: solid;
+    border-color: red transparent;
+}
+.pentagon:before {
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -74px;
+    left: -17px;
+    border-width: 0 41px 35px;
+    border-style: solid;
+    border-color: transparent transparent red;
 }
 
 .form__title {

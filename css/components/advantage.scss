@@ -1,9 +1,22 @@
 .advantage{
     display: flex;
     flex-direction: column;
-    // padding: rem(100px) 0;
     height: 100vh;
     min-height: rem(650px);
+
+    &::after{
+        content: "";
+        border: 45px solid transparent;
+        border-right-color: red;
+        border-left-width: 0;
+        position: absolute;
+        left: 6%;
+        bottom: -103%;
+        border-top-width: 20px;
+        border-bottom-width: 20px;
+        -webkit-transform: rotate(-30deg);
+        transform: rotate(-35deg);
+    }
 }
 
 .container--advantage{
