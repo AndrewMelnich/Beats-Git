@@ -36,12 +36,9 @@
         &::before{
             content: "";
             background: url(../image/preview/headphones.svg) center center / contain no-repeat;
-            // background-position: center center;
-            // background-repeat: no-repeat;
-            // background-size: contain;
             width: rem(323px);
             height: rem(323px);
-            padding-bottom: rem(60px);
+            padding-bottom: 1.75rem;
         }
     }
 
