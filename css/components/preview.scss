@@ -1,45 +1,20 @@
 .preview{
     background-color: #F5F5F5;
-    background-image: url(../image/preview/headphones1100.svg);
-    background-repeat: no-repeat;
-    background-position: left 73% center;
     display: flex;
     height: 100vh;
     min-height: rem(650px);
-
-    @include tablets{
-        background-image: none;
-    }
-
-    &::after{
-        content: "";
-        width: 46px;
-        height: 10px;
-        background-color:  #C4C4C4;
-        position: absolute;
-        right: 10%;
-        bottom: 0;
-        transform: rotate(-45deg);
-    }
-
-    // &::after{
-    //     content: "";
-    //     width: 24px;
-    //     height: 24px;
-    //     position: absolute;
-    //     bottom: -200%;
-    //     right: 10%;
-
-    //     background: #292929;
-    //     transform: rotate(29.11deg);
-    // }
 }
 
 .container--preview{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;   
+    height: 100%;  
+    background: url(../image/preview/headphones1100.svg) right center / 50% auto no-repeat;
+
+    @include tablets{
+        background: none;
+    }
 }
 
 .preview__section{

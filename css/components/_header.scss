@@ -61,6 +61,14 @@
 
     &:last-child{
         margin-right: rem(0px);
+        
+    }
+}
+
+.menu__link{
+    &:hover{
+        color: #E01F3D;
+        transition: 0.3s;
     }
 }
 

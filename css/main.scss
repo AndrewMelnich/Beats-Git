@@ -20,9 +20,12 @@ $z-fixed-menu: 100;
 
 // components
 @import "components/base.scss";
+@import "components/decor.scss";
 @import "components/_header.scss";
 @import "components/preview.scss";
 @import "components/advantage.scss";
 @import "components/reviews.scss";
 @import "components/form.scss";
+@import "components/map.scss";
+@import "components/footer.scss";
 @import "components/fixed-menu.scss";

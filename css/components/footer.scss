@@ -1,0 +1,42 @@
+.footer{
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    background: #FFFFFF;
+}
+
+.contacts__footer{
+    display: inline-flex;
+    flex-direction: column;
+    text-align: start;
+    align-items: flex-start;
+}
+
+.contacts__adds-text{
+    display: block;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+
+.socials{
+    display: inline-block;
+
+}
+
+.social-icon{
+    width: 30px;
+    height: 30px;
+    transition: 0.2s;
+    margin-right: 5px;
+
+    fill:#B3B3B3;
+
+    &:hover{
+        fill:black; 
+        transition: 0.5s;
+    }
+}
+

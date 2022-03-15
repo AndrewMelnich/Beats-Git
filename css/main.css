@@ -143,6 +143,8 @@ button {
 }
 .btn--theme--red:hover {
   background: #f5002d;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .btn--theme--transparent {
@@ -153,6 +155,8 @@ button {
 }
 .btn--theme--transparent:hover {
   color: #a9a9a9;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .wrapper {
@@ -165,6 +169,14 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.decor__preview {
+  width: 41px;
+  height: 41px;
+  position: absolute;
+  bottom: 0%;
+  right: 20%;
 }
 
 .header {
@@ -251,6 +263,12 @@ button {
   margin-right: 0rem;
 }
 
+.menu__link:hover {
+  color: #E01F3D;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
 .contacts {
   font-style: normal;
   font-weight: normal;
@@ -303,30 +321,11 @@ button {
 
 .preview {
   background-color: #F5F5F5;
-  background-image: url(../image/preview/headphones1100.svg);
-  background-repeat: no-repeat;
-  background-position: left 73% center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   height: 100vh;
   min-height: 40.625rem;
-}
-@media screen and (max-width: 768px) {
-  .preview {
-    background-image: none;
-  }
-}
-.preview::after {
-  content: "";
-  width: 46px;
-  height: 10px;
-  background-color: #C4C4C4;
-  position: absolute;
-  right: 10%;
-  bottom: 0;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
 }
 
 .container--preview {
@@ -341,6 +340,12 @@ button {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 100%;
+  background: url(../image/preview/headphones1100.svg) right center/50% auto no-repeat;
+}
+@media screen and (max-width: 768px) {
+  .container--preview {
+    background: none;
+  }
 }
 
 .preview__section {
@@ -454,19 +459,6 @@ button {
           flex-direction: column;
   height: 100vh;
   min-height: 40.625rem;
-}
-.advantage::after {
-  content: "";
-  border: 45px solid transparent;
-  border-right-color: red;
-  border-left-width: 0;
-  position: absolute;
-  left: 6%;
-  bottom: -103%;
-  border-top-width: 20px;
-  border-bottom-width: 20px;
-  -webkit-transform: rotate(-30deg);
-  transform: rotate(-35deg);
 }
 
 .container--advantage {
@@ -784,31 +776,13 @@ button {
 }
 
 .inner-form-decor {
+  width: 3.125rem;
+  height: 3.125rem;
   position: absolute;
   bottom: -202%;
   right: 5%;
   -webkit-transform: rotate(-15deg);
           transform: rotate(-15deg);
-}
-
-.pentagon {
-  position: relative;
-  width: 80px;
-  border-width: 40px 16px 0;
-  border-style: solid;
-  border-color: red transparent;
-}
-
-.pentagon:before {
-  content: "";
-  position: absolute;
-  height: 0;
-  width: 0;
-  top: -74px;
-  left: -17px;
-  border-width: 0 41px 35px;
-  border-style: solid;
-  border-color: transparent transparent red;
 }
 
 .form__title {
@@ -1011,6 +985,64 @@ button {
     text-align: center;
     margin-top: 2.375rem;
   }
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+}
+
+.footer {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0;
+  background: #FFFFFF;
+}
+
+.contacts__footer {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.contacts__adds-text {
+  display: block;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.socials {
+  display: inline-block;
+}
+
+.social-icon {
+  width: 30px;
+  height: 30px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  margin-right: 5px;
+  fill: #B3B3B3;
+}
+.social-icon:hover {
+  fill: black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .fixed-menu {
