@@ -1084,8 +1084,8 @@ button {
 .map-img {
   -o-object-fit: cover;
      object-fit: cover;
-  height: 482px;
-  width: 480px;
+  height: 100%;
+  width: 100%;
 }
 
 .container--footer {
