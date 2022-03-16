@@ -10,6 +10,7 @@
     @include tablets {
         display: flex;
         justify-content: center;
+        
     }    
 }
 
@@ -22,8 +23,6 @@
     transform: rotate(-15deg);
 
 }
-
-
 
 .form__title {
     font-family: Play;
@@ -42,7 +41,7 @@
     margin-bottom: rem(58px);
 
     @include tablets {
-        margin-bottom: rem(40px);
+        margin-bottom: rem(30px);
     }
 }
 
@@ -51,7 +50,10 @@
 
     @include tablets {
         flex-direction: column;
-        padding: 0 18%;
+        // padding: 0 18%;
+        max-width: 466px;
+        padding: 0;
+        margin: 0 auto;
     }
 
     @include phones {
@@ -62,7 +64,7 @@
 
 .form__col {
     flex: 1;
-    margin-right: rem(20px);
+    margin-right: rem(35px);
 
     &:last-child {
         margin-right: 0;
@@ -117,12 +119,11 @@
     }
 
     @include tablets {
-        // height: 5.5rem;
         padding: 5px;
         margin-bottom: rem(8px);
 
         &--textarea {
-            height: 5.5rem;
+            height: 4.6rem;
         }
     }
 }
@@ -208,6 +209,6 @@
 
     @include tablets {
         text-align: center;
-        margin-top: rem(38px);
+        margin-top: 1.375rem;
     }
 }

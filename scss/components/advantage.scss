@@ -10,6 +10,14 @@
     flex-direction: column;
     justify-content: center;
     height: 100%;
+
+    @include tablets{
+        width: 99%;
+    }
+
+    @include phones{
+        width: 97%;
+    }
 }
 
 .advantage__preview{
@@ -21,18 +29,22 @@
     padding-top: rem(100px);
     margin-bottom: rem(62px);
 
-    .advantage__title{
-        margin-bottom: rem(18px);
-    }
-
     @include tablets{
         padding: 0 12%;
         margin-bottom: rem(53px);
     }
 
     @include phones{
-        padding: 0 10%;
-        // margin-bottom: rem(53px);
+        padding: 0 5%;
+        margin-bottom: rem(55px);
+    }
+}
+
+.advantage__title{
+    margin-bottom: rem(18px);
+
+    @include phones{
+        margin-bottom: rem(11px);
     }
 }
 
@@ -42,6 +54,7 @@
 
     @include phones{
         flex-direction: column;
+        justify-content: space-between;
     }
 }
 
@@ -49,6 +62,7 @@
     flex: 1;
     position: relative;
     padding: 0 4%;
+
 
     &::before{
         position: absolute;
@@ -74,6 +88,10 @@
         padding-left: rem(0px);
     }
 
+    @include tablets{
+        padding: 0 0.4%;
+    }
+
     @include phones{
         display: flex;
         align-items: center;
@@ -86,19 +104,18 @@
 .advantage__item-img{
     display: flex;
     width: rem(128px);
-    height: rem(128px);
+    height: rem(120px);
     border-radius: 50%;
     background: #F2F5F4;   
     text-align: center;
-    margin: 0 auto rem(24px);
+    margin: 0 auto rem(30px);
     padding: rem(30px); 
     flex-shrink: 0;
 
-    &-margin{
-        height: 100%;
-        width: 100%; 
-    }
-    
+    // &:first-child{
+        
+    // }
+   
     @include phones {
         margin-right: rem(12px);
         margin-bottom: 0;
@@ -107,4 +124,12 @@
 
 .advantage__text-title{
     margin-bottom: rem(7px);
+
+    @include tablets{
+        margin-bottom: 1rem;
+    }
+
+    @include phones {
+        margin-bottom: 5px;
+    }
 }

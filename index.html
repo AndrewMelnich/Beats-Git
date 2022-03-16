@@ -13,9 +13,9 @@
             <div class="container container--preview">
                 <header class="header">
                     <div class="header__col">
-                        <div class="logo">
-                            <img src="./image/icons/logo.svg" alt="" class="logo__icon">
-                        </div>
+                        <svg class="logo__icon">   
+                            <use xlink:href="./scss/svg/sprite.svg#logo__svg"></use>
+                        </svg>
                         <nav class="menu">
                             <ul class="menu__list">
                                 <li class="menu__item"><a href="" class="menu__link">О нас</a></li>
@@ -30,9 +30,9 @@
                     </div>
                     <div class="header__col header__contacts">
                         <address class="contacts contacts__header">
-                            <span class="contacts__icon">
-                                <img src="./image/icons/phone__icon.svg" alt="" class="contact__icon">
-                            </span>
+                            <svg class="contacts__icon">   
+                                <use xlink:href="./scss/svg/sprite.svg#phone__icon"></use>
+                            </svg>
                             <a href="tel: +78007003030" class="contacts__phone">8 800 903 90 90</a>
                         </address>
                     </div>
@@ -51,21 +51,21 @@
                 </div>
                 <ul class="features">
                     <li class="features__item feature">
-                        <div class="feature__icon">
-                            <img src="./image/icons/icon__song.svg" alt="" class="feature__icon-img">
-                        </div>
+                        <svg class="feature__icon">   
+                            <use xlink:href="./scss/svg/sprite.svg#icon__song"></use>
+                        </svg>
                         <div class="feature__text">Безупречный звук</div>
                     </li>
                     <li class="features__item feature">
-                        <div class="feature__icon">
-                            <img src="./image/icons/icon__hours.svg" alt="" class="feature__icon-img">
-                        </div>
+                        <svg class="feature__icon">   
+                            <use xlink:href="./scss/svg/sprite.svg#icon__hours"></use>
+                        </svg>
                         <div class="feature__text">До 40 часов работы</div>
                     </li>
                     <li class="features__item feature">
-                        <div class="feature__icon">
-                            <img src="./image/icons/icon__fuel.svg" alt="" class="feature__icon-img">
-                        </div>
+                        <svg class="feature__icon">   
+                            <use xlink:href="./scss/svg/sprite.svg#icon__fuel"></use>
+                        </svg>
                         <div class="feature__text">Технология Fast Fuel</div>
                     </li>
                 </ul>
@@ -99,9 +99,9 @@
                 </div>
                 <ul class="advantage__list">
                     <li class="advantage__item">
-                        <div class="advantage__item-img">
-                            <img src="./image/advantage/Vector.svg" alt="" class="advantage__item-img-margin"> 
-                        </div>
+                        <svg class="advantage__item-img">   
+                            <use xlink:href="./scss/svg/sprite.svg#hour"></use>
+                        </svg>
                         <div class="advantage__text">
                             <h2 class="advantage__text-title">40 часов работы</h2>
                             <p>Наушники Beats Solo3 могут работать 
@@ -110,9 +110,9 @@
                         </div> 
                     </li>
                     <li class="advantage__item">
-                        <div class="advantage__item-img">
-                            <img src="./image/advantage/feat-2.svg" alt="" class="advantage__item-img-margin"> 
-                        </div>
+                        <svg class="advantage__item-img">   
+                            <use xlink:href="./scss/svg/sprite.svg#song"></use>
+                        </svg>
                         <div class="advantage__text">
                             <h2 class="advantage__text-title">Фирменное звучание</h2>
                             <p>Фирменное звучание Beats в наушниках 
@@ -122,9 +122,9 @@
                         </div>
                     </li>
                     <li class="advantage__item">
-                        <div class="advantage__item-img">
-                            <img src="./image/advantage/feat-3.svg" alt="" class="advantage__item-img-margin">
-                        </div>
+                        <svg class="advantage__item-img">   
+                            <use xlink:href="./scss/svg/sprite.svg#fuel"></use>
+                        </svg>
                         <div class="advantage__text">
                             <h2 class="advantage__text-title">Быстрая зарядка</h2>
                             <p>Благодаря технологии Fast Fuel 
@@ -146,7 +146,7 @@
                     <div class="reviews__item-text">
                         <h2 class="text__title">Отличный звук</h2>
                         <p class="text__desc">
-                            Я ем малыми порциями, но часто. Это повышает мою продуктивность в разы. В течение дня сижу за компьютером и часто отходить в кафе или на кухню просто не могу себе позволить. А батончик – он всегда под рукой. Это приятно и удобно. 
+                            Батончики понравились. На мой взгляд слегка завышена цена по сравнению с конкурентами, однако, как говорится – оно того стоит. Нравится носить с собой, нравится держать в руке. Ну и конечно же, кушать. Идеально утоляют голод, хоть и не надолго. Через час уже ем ещё один. Но это скорее плюс, чем минус.
                         </p>
                         <h3 class="text__name">Билли Айлиш</h3>
                     </div>
@@ -239,7 +239,7 @@
                             </label>
                         </div>
                         <div class="form__btn">
-                            <input type="submit" value="Заказать" class="btn btn--theme--red">
+                            <input type="submit" value="Заказать" class="btn btn--theme--red form--btn--theme--red">
                             <input type="reset" value="Очистить" class="btn btn--theme--transparent">
                         </div>
                     </div>
@@ -249,46 +249,51 @@
         </section>
         
         <section class="map">
-            <img src="./image/map/map.png" alt="" class="map">
+            <img src="./image/map/map.png" alt="" class="map-img">
+
+            <footer class="footer">
+                <div class="container container--footer">
+                    <address class="contacts contacts__footer">
+                        <div class="contacts__adds-text">
+                            <span>
+                                Москва, ул.Новый Арбат, д.31/12
+                            </span>
+                        </div>
+                        <div class="contacts__adds-phone">
+                            <svg class="contacts__icon">   
+                                <use xlink:href="./scss/svg/sprite.svg#phone__icon"></use>
+                            </svg>
+                            <a href="tel: +78007003030" class="contacts__phone">8 800 903 90 90</a>
+                        </div>
+                    </address>
+                    <div class="socials">
+                        <a href="#" class="social-icon__link">
+                            <svg class="social-icon">   
+                                <use xlink:href="./scss/svg/socials.svg#vk"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon__link">
+                            <svg class="social-icon">   
+                                <use xlink:href="./scss/svg/socials.svg#fb"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon__link">
+                            <svg class="social-icon">   
+                                <use xlink:href="./scss/svg/socials.svg#in"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon__link">
+                            <svg class="social-icon">   
+                                <use xlink:href="./scss/svg/socials.svg#tg"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+        </footer>
         </section> 
         
-        <footer class="footer container">
-                <address class="contacts contacts__footer">
-                    <div class="contacts__adds-text">
-                        <span>
-                            Москва, ул.Новый Арбат, д.31/12
-                        </span>
-                    </div>
-                    <div class="contacts__adds-phone">
-                        <span class="contacts__icon contacts__icon__footer">
-                            <img src="./image/icons/phone__icon.svg" alt="" class="contact__icon">
-                        </span>
-                        <a href="tel: +78007003030" class="contacts__phone">8 800 903 90 90</a>
-                    </div>
-                </address>
-                <div class="socials">
-                    <a href="#" class="social-icon__link">
-                        <svg class="social-icon">   
-                            <use xlink:href="./css/svg/socials.svg#vk"></use>
-                        </svg>
-                    </a>
-                    <a href="#" class="social-icon__link">
-                        <svg class="social-icon">   
-                            <use xlink:href="./css/svg/socials.svg#fb"></use>
-                        </svg>
-                    </a>
-                    <a href="#" class="social-icon__link">
-                        <svg class="social-icon">   
-                            <use xlink:href="./css/svg/socials.svg#in"></use>
-                        </svg>
-                    </a>
-                    <a href="#" class="social-icon__link">
-                        <svg class="social-icon">   
-                            <use xlink:href="./css/svg/socials.svg#tg"></use>
-                        </svg>
-                    </a>
-                </div>
-        </footer>
+        
     </div>
 </body>
 </html>
