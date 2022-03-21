@@ -103,19 +103,15 @@
 
 .advantage__item-img{
     display: flex;
+    text-align: center;
+    flex-shrink: 0;
     width: rem(128px);
     height: rem(120px);
     border-radius: 50%;
-    background: #F2F5F4;   
-    text-align: center;
+    background: #F2F5F4;
+    padding: rem(30px);
     margin: 0 auto rem(30px);
-    padding: rem(30px); 
-    flex-shrink: 0;
 
-    // &:first-child{
-        
-    // }
-   
     @include phones {
         margin-right: rem(12px);
         margin-bottom: 0;

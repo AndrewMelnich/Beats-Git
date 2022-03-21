@@ -13,6 +13,7 @@ $phones: 480px;
 
 //z-inexes
 $z-fixed-menu: 100;
+$z-slider-shop: 90;
 
 // fonts
 @import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
@@ -24,6 +25,7 @@ $z-fixed-menu: 100;
 @import "components/_header.scss";
 @import "components/preview.scss";
 @import "components/advantage.scss";
+@import "components/shop.scss";
 @import "components/reviews.scss";
 @import "components/form.scss";
 @import "components/map.scss";

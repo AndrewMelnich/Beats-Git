@@ -7,8 +7,8 @@
     height: 100vh;
     min-height: rem(650px);
     background-color: #fff;
-    border-bottom: 2px solid black;
-    border-top: 2px solid black;
+    // border-bottom: 2px solid black;
+    // border-top: 2px solid black;
 
     @include tablets {
         justify-content: center;

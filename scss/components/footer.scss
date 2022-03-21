@@ -1,3 +1,13 @@
+.footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: #FFFFFF;
+    z-index: 80;
+}
+
 .container--footer{
     display: flex;
     justify-content: space-between;
@@ -54,9 +64,12 @@
     
 }
 
-
 .socials{
-    display: inline-block;
+    transform: translateX(0);
+}
+
+.social__list{
+    display: flex;
 
     @include phones{
         display: inline-flex;
@@ -87,7 +100,7 @@
         margin-right: 14px;
 
         &:last-child{
-            margin-right: 0;
+            margin-right: 10px;
         }
     }
 }

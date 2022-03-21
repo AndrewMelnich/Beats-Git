@@ -99,9 +99,11 @@
                 </div>
                 <ul class="advantage__list">
                     <li class="advantage__item">
-                        <svg class="advantage__item-img">   
-                            <use xlink:href="./scss/svg/sprite.svg#hour"></use>
-                        </svg>
+                        <div class="advantage__item-img">
+                            <svg class="advantage__item-icon">   
+                                <use xlink:href="./scss/svg/sprite.svg#hour"></use>
+                            </svg>
+                        </div>
                         <div class="advantage__text">
                             <h2 class="advantage__text-title">40 часов работы</h2>
                             <p>Наушники Beats Solo3 могут работать 
@@ -110,9 +112,11 @@
                         </div> 
                     </li>
                     <li class="advantage__item">
-                        <svg class="advantage__item-img">   
-                            <use xlink:href="./scss/svg/sprite.svg#song"></use>
-                        </svg>
+                        <div class="advantage__item-img">
+                            <svg class="advantage__item-icon">   
+                                <use xlink:href="./scss/svg/sprite.svg#song"></use>
+                            </svg>
+                        </div>
                         <div class="advantage__text">
                             <h2 class="advantage__text-title">Фирменное звучание</h2>
                             <p>Фирменное звучание Beats в наушниках 
@@ -122,9 +126,11 @@
                         </div>
                     </li>
                     <li class="advantage__item">
-                        <svg class="advantage__item-img">   
-                            <use xlink:href="./scss/svg/sprite.svg#fuel"></use>
-                        </svg>
+                        <div class="advantage__item-img">
+                            <svg class="advantage__item-icon">   
+                                <use xlink:href="./scss/svg/sprite.svg#fuel"></use>
+                            </svg>
+                        </div>
                         <div class="advantage__text">
                             <h2 class="advantage__text-title">Быстрая зарядка</h2>
                             <p>Благодаря технологии Fast Fuel 
@@ -132,6 +138,71 @@
                             </p>
                         </div>
                     </li>
+                </ul>
+            </div>
+        </section>
+
+
+        
+        <section class="shop">  
+            <div class="slider__shop">
+                <a class="slider__shop-left">
+                    <svg class="slider__shop-icon">   
+                        <use xlink:href="./scss/svg/sprite.svg#arrow"></use>
+                    </svg>
+                </a>
+                <a class="slider__shop-right">
+                    <svg class="slider__shop-icon">   
+                        <use xlink:href="./scss/svg/sprite.svg#arrow"></use>
+                    </svg>  
+                </a>
+            </div>  
+            <div class="container">
+                <ul class="shop__list">
+                  <li class="shop__item">
+                    <div class="shop__img">
+                        <img src="./image/shop/headphones__white.png" alt="" class="shop__headphones">
+                    </div>
+                    <div class="shop__col">
+                        <button class="shop__add">
+                            <svg class="shop__add-icon">   
+                                <use xlink:href="./scss/svg/sprite.svg#add"></use>
+                            </svg>
+                        </button>                        
+                        <h1 class="shop__title">beats solo 3. цвет «атласное серебро»</h1>
+                        <div class="shop__desc">
+                            <p class="shop__desc-text">
+                                Беспроводные наушники Beats Solo3 готовы к работе в любой момент. Включите их и поднесите к своему iPhone — они мгновенно подключатся к нему.
+                            </p>
+                            <ul class="shop-feature__list">
+                                <li class="shop-feature__item">
+                                    <div class="shop-feature__item-title">
+                                        Зарядка
+                                        <div class="shop-feature__item-desc">
+                                            2 часа
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="shop-feature__item">
+                                    <div class="shop-feature__item-title">
+                                        Вес 
+                                        <div class="shop-feature__item-desc">
+                                            215 грамм
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="shop__desc-row">
+                                <div class="shop__desc-price">
+                                    14 990 ₽
+                                </div>
+                                <div class="buttons buttons__shop">
+                                    <a href="" class="btn btn--theme--red">ЗАКАЗАТЬ</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </li>
                 </ul>
             </div>
         </section>
@@ -267,30 +338,39 @@
                         </div>
                     </address>
                     <div class="socials">
-                        <a href="#" class="social-icon__link">
-                            <svg class="social-icon">   
-                                <use xlink:href="./scss/svg/socials.svg#vk"></use>
-                            </svg>
-                        </a>
-                        <a href="#" class="social-icon__link">
-                            <svg class="social-icon">   
-                                <use xlink:href="./scss/svg/socials.svg#fb"></use>
-                            </svg>
-                        </a>
-                        <a href="#" class="social-icon__link">
-                            <svg class="social-icon">   
-                                <use xlink:href="./scss/svg/socials.svg#in"></use>
-                            </svg>
-                        </a>
-                        <a href="#" class="social-icon__link">
-                            <svg class="social-icon">   
-                                <use xlink:href="./scss/svg/socials.svg#tg"></use>
-                            </svg>
-                        </a>
+                        <ul class="social__list">
+                            <li class="social__item">
+                                <a href="#" class="social-icon__link">
+                                    <svg class="social-icon">   
+                                        <use xlink:href="./scss/svg/socials.svg#vk"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a href="#" class="social-icon__link">
+                                    <svg class="social-icon">   
+                                        <use xlink:href="./scss/svg/socials.svg#fb"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a href="#" class="social-icon__link">
+                                    <svg class="social-icon">   
+                                        <use xlink:href="./scss/svg/socials.svg#in"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a href="#" class="social-icon__link">
+                                    <svg class="social-icon">   
+                                        <use xlink:href="./scss/svg/socials.svg#tg"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul> 
                     </div>
                 </div>
-                
-        </footer>
+            </footer>
         </section> 
         
         

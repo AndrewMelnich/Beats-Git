@@ -84,6 +84,17 @@
     padding-top: 10px;
 }
 
+.contacts__phone{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+
+    @include phones{
+        font-size: 16px;
+        line-height: 21px;
+    }
+}
+
 .contacts__icon{
     max-width: rem(14px);
     max-height: rem(14px);
