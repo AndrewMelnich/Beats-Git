@@ -16,7 +16,7 @@
                         <svg class="logo__icon">   
                             <use xlink:href="./scss/svg/sprite.svg#logo__svg"></use>
                         </svg>
-                        <nav class="menu">
+                        <nav class="menu ">
                             <ul class="menu__list">
                                 <li class="menu__item"><a href="" class="menu__link">О нас</a></li>
                                 <li class="menu__item"><a href="" class="menu__link">Наушники</a></li>
@@ -36,11 +36,9 @@
                             <a href="tel: +78007003030" class="contacts__phone">8 800 903 90 90</a>
                         </address>
                     </div>
-                    <a class="hamburger">
-                        <span class="hamburger__plank"></span>
-                        <span class="hamburger__plank"></span>
-                        <span class="hamburger__plank"></span>
-                    </a>
+                    <div class="hamburger">
+                        <span></span>
+                    </div>
                 </header>
                 <div class="preview__section">
                     <h1 class="preview__title">Беспроводные наушники BEATS SOLO 3</h1>
@@ -72,9 +70,9 @@
             </div>
         </section>
 
-        <svg class="decor__preview">
+        <!-- <svg class="decor__preview">
             <use xlink:href="./css/svg/decor.svg#rectangle"> </use>
-        </svg>
+        </svg> -->
 
         <nav class="fixed-menu">
             <ul class="fixed-menu__list">
@@ -375,5 +373,32 @@
         
         
     </div>
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const menu = document.querySelector('.menu');
+        const lock = document.querySelector('body');
+
+        hamburger.addEventListener('click', function () {
+            if (hamburger.classList.contains('hamburger--active')){
+                hamburger.classList.remove('hamburger--active')
+            } else {
+                hamburger.classList.add('hamburger--active')
+            }
+            if (menu.classList.contains('menu--active')){
+                menu.classList.remove('menu--active')
+            } else {
+                menu.classList.add('menu--active')
+            }
+            if (lock.classList.contains('lock')){
+                lock.classList.remove('lock')
+            } else {
+                lock.classList.add('lock')
+            }
+            console.log('нажал на бургер'); 
+        })
+    </script>
+
 </body>
 </html>
+
