@@ -1625,6 +1625,8 @@ button {
     z-index: 50;
     background: #313131;
     color: #fff;
+    font-family: "Play";
+    font-style: normal;
     font-weight: 400;
     font-size: 36px;
     line-height: 72px;
@@ -1674,6 +1676,7 @@ button {
 @media screen and (max-width: 768px) {
   .menu__item {
     margin-right: 0;
+    margin-bottom: 0;
   }
 }
 
