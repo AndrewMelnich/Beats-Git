@@ -32,10 +32,15 @@
     text-align: start;
     align-items: flex-start;
 
+    @include tablets{
+        padding: rem(32px) 1.6% rem(28px) 2%;
+    }
+
     @include phones{
         text-align: center;
         align-items: center;
-        margin-bottom: 19px;
+        margin-bottom: 0;
+        padding-bottom: rem(17px);
     }
 }
 
@@ -46,8 +51,13 @@
     line-height: 24px;
     color: #292929;
 
+    @include tablets{
+        font-size: rem(21px);
+    }
+
     @include phones{
         margin-bottom: 12px;
+        font-size: rem(18px);
     }
 }
 
@@ -65,7 +75,11 @@
 }
 
 .socials{
-    transform: translateX(0);
+    transform: translateX(29px);
+
+    @include phones{
+        transform: translateX(0); 
+    }
 }
 
 .social__list{
@@ -76,17 +90,35 @@
     }
 }
 
+.social__item{
+    margin-right: 10px;
+
+    @include phones{
+        margin-right: 5px;   
+    }
+    
+    &:last-child{
+        margin-right: 0;
+    }
+}
+
 .social-icon{
     width: 30px;
     height: 30px;
     transition: 0.2s;
-    margin-right: 5px;
+   
+    
 
     fill:#B3B3B3;
 
     &:hover{
         fill:black; 
         transition: 0.5s;
+    }
+
+    @include tablets{
+        width: rem(32px);  
+        height: rem(32px); 
     }
 
     @include phones{

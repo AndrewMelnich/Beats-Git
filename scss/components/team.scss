@@ -1,0 +1,184 @@
+.team {
+    display: flex;
+    align-items: center;
+
+    &__main {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.team .team__title {
+    text-align: center;
+    margin-bottom: 55px;
+
+    @include tablets {
+        margin-bottom: 32px;
+    }
+
+    @include phones{
+        margin-bottom: 36px;
+    }
+}
+
+.team__list {
+    display: flex;
+    flex-wrap: nowrap;
+
+    @include tablets {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+.team__item {
+    flex: 1;
+    margin-right: 20px;
+    align-items: center;
+    text-align: center;
+
+    &:last-child {
+        margin-right: 0px;
+    }
+
+    @include tablets {
+        margin-right: 0;
+    }
+
+    @include phones{
+        margin-bottom: 6px;
+    }
+}
+
+.team__item-photo {
+    max-width: 220px;
+    max-height: 290px;
+    margin-bottom: 17px;
+    display: inline-block;
+
+    @include tablets{
+        display: none;
+        max-width: 222px;
+        margin-bottom: 15px;
+
+    }
+
+    @include phones{
+        margin-top: 9px;
+        max-width: 138px;
+        max-height: 180px;
+    }
+
+    &--hidden {
+        display: none;
+
+        @include tablets {
+            display: inline-block;
+        }
+    }
+
+}
+
+.team__item-avatar {
+    display: block;
+    max-width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.team__name {
+    font-family: 'Play';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    color: #292929;
+    margin-bottom: 9px;
+    align-items: center;
+
+    background-color: transparent;
+    border: transparent;
+    padding: 0;
+    text-decoration: none;
+    text-transform: none;
+
+   
+
+    &::after{
+        content: "";
+        display: inline-block;
+        width: 0;
+        height: 0;
+        transition: 0.3s ease;
+        border-style: solid;
+        border-width: 9px 4.5px 0 4.5px;
+        border-color: #e01f3c transparent transparent transparent;
+
+        @include tablets {
+            border-color: #365A49 transparent transparent transparent;
+        }
+    }
+
+    &--active::after{
+        transform: rotate(180deg);
+    }
+
+    @include tablets {
+        font-family: 'Alegreya Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 21.0181px;
+        line-height: 25px;
+        margin-bottom: 16px;
+    }
+
+    @include phones{
+        margin-bottom: 0px;
+    }
+}
+
+.team__desc{
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s ease;
+    
+
+    @include tablets{
+        padding: 0 20%;
+    }
+
+    &--active{
+        max-height: 100%;  
+    }
+}
+
+
+.team__desc-profession{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #292929;
+    margin-bottom: 4px;
+
+    @include tablets {
+        margin-bottom: 10px;
+    }
+}
+
+.team__desc-text {
+    font-family: 'Play';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #666;
+    padding: 0 20%;
+
+    @include tablets{
+        padding: 0 8%;
+    }
+
+    @include phones{
+        padding: 0;
+    }
+}

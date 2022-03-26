@@ -43,6 +43,10 @@
     @include tablets {
         margin-bottom: rem(30px);
     }
+
+    @include phones{
+        margin-bottom: 39px;
+    }
 }
 
 .form {
