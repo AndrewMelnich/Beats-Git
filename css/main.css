@@ -821,23 +821,24 @@ button {
 
 .slider__shop {
   z-index: 90;
+  width: 100%;
 }
 
 .slider__shop-left {
   position: absolute;
-  top: 50%;
-  left: 8%;
+  top: 53%;
+  left: -4%;
 }
 @media screen and (max-width: 768px) {
   .slider__shop-left {
-    top: 34.2%;
-    left: 20%;
+    top: 26.2%;
+    left: 18.5%;
   }
 }
 @media screen and (max-width: 480px) {
   .slider__shop-left {
-    top: 26.5%;
-    left: 3%;
+    top: 22.8%;
+    left: 0%;
   }
 }
 
@@ -845,19 +846,19 @@ button {
   -webkit-transform: rotate(-180deg);
           transform: rotate(-180deg);
   position: absolute;
-  top: 49%;
-  right: 8%;
+  top: 52%;
+  right: 0%;
 }
 @media screen and (max-width: 768px) {
   .slider__shop-right {
-    top: 33.5%;
-    right: 21%;
+    top: 25%;
+    right: 19%;
   }
 }
 @media screen and (max-width: 480px) {
   .slider__shop-right {
-    top: 25.5%;
-    right: 3%;
+    top: 21.65%;
+    right: 0%;
   }
 }
 
@@ -879,6 +880,10 @@ button {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  padding-left: 29px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 @media screen and (max-width: 768px) {
   .shop__item {
@@ -898,6 +903,7 @@ button {
       -ms-flex: 1;
           flex: 1;
   margin-right: 60px;
+  margin-top: 30px;
 }
 .shop__img::before {
   width: 28.25rem;
@@ -1042,7 +1048,7 @@ button {
           flex-direction: column;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  max-width: 420px;
+  max-width: 400px;
 }
 @media screen and (max-width: 768px) {
   .shop__col {

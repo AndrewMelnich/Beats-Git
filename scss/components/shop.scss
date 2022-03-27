@@ -8,39 +8,40 @@
 }
 
 .slider__shop{
-    z-index: $z-slider-shop;   
+    z-index: $z-slider-shop;  
+    width: 100%; 
 }
 
 .slider__shop-left{
     position: absolute;
-    top: 50%;
-    left: 8%;
+    top: 53%;
+    left: -4%;
 
     @include tablets{
-        top: 34.2%;
-        left: 20%;
+        top: 26.2%;
+        left: 18.5%;
     }
 
     @include phones{
-        top: 26.5%;
-        left: 3%;
+        top: 22.8%;
+        left: 0%;
     }
 }
 
 .slider__shop-right{
     transform: rotate(-180deg);
     position: absolute;
-    top: 49%;
-    right: 8%;
+    top: 52%;
+    right: 0%;
 
     @include tablets{
-        top: 33.5%;
-        right: 21%;    
+        top: 25%;
+        right: 19%;   
     }
 
     @include phones{
-        top: 25.5%;
-        right: 3%;
+        top: 21.65%;
+        right: 0%;
     }
 }
 
@@ -55,6 +56,8 @@
     flex-wrap: nowrap;
     justify-content: center;
     align-items: flex-end;
+    padding-left: 29px;
+    align-items: flex-start;
 
     @include tablets{
         flex-direction: column;
@@ -66,6 +69,7 @@
 .shop__img{
     flex: 1;
     margin-right: 60px;
+    margin-top: 30px;
     
     &::before{
         width: rem(452px);
@@ -204,7 +208,7 @@
     flex: 1;
     flex-direction: column;
     flex-wrap: nowrap;
-    max-width: 420px;
+    max-width: 400px;
 
     @include tablets{
         text-align: center;
@@ -220,14 +224,14 @@
     max-width: 368px;
 
     @include tablets{
-        max-width: 85%;
+        max-width: 90%;
         text-align: center;
         justify-content: center;
         margin: 0 auto;
     }
 
     @include phones{
-        max-width: 90%;
+        max-width: 97%;
     }
 }
 
