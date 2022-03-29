@@ -1,7 +1,6 @@
 const teamName = document.querySelectorAll('.team__name');
 const teamDesc = document.querySelectorAll('.team__desc');
 // let List = document.getElementById('teamList');
-console.log('teamName.length', teamName.length);
 
 function closeEveryItems(){
     for (let i = 0; i < teamName.length; i++) {
