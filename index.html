@@ -273,7 +273,7 @@
             <div class="container">
                 <div class="team__main">
                     <h1 class="team__title">Команда</h1>
-                    <ul class="team__list">
+                    <ul class="team__list" id="teamList">
                         <li class="team__item">
                             <div class="team__item-photo">
                                 <img src="./image/team/team1.png" alt="" class="team__item-avatar">
@@ -308,8 +308,8 @@
                             <div class="team__item-photo">
                                 <img src="./image/team/team3.png" alt="" class="team__item-avatar">
                             </div>
-                            <button class="team__name team__name--active">Кирилл Матросов </button>
-                            <div class="team__desc team__desc--active">
+                            <button class="team__name ">Кирилл Матросов </button>
+                            <div class="team__desc ">
                                 <div class="team__item-photo team__item-photo--hidden">
                                     <img src="./image/team/team3.png" alt="" class="team__item-avatar">
                                 </div>
@@ -324,7 +324,7 @@
                                 <img src="./image/team/team4.png" alt="" class="team__item-avatar">
                             </div>
                             <button class="team__name">Мила Рыжкова </button>
-                            <div class="team__desc ">
+                            <div class="team__desc">
                                 <div class="team__item-photo team__item-photo--hidden">
                                     <img src="./image/team/team4.png" alt="" class="team__item-avatar">
                                 </div>
@@ -337,6 +337,7 @@
                     </ul>
                 </div>
             </div>
+            
         </section>
 
         <section class="reviews">
@@ -509,30 +510,9 @@
         </section>
     </div>
 
-    <script>
-        const hamburger = document.querySelector(".hamburger");
-        const menu = document.querySelector('.menu');
-        const lock = document.querySelector('body');
-
-        hamburger.addEventListener('click', function () {
-            if (hamburger.classList.contains('hamburger--active')) {
-                hamburger.classList.remove('hamburger--active')
-            } else {
-                hamburger.classList.add('hamburger--active')
-            }
-            if (menu.classList.contains('menu--active')) {
-                menu.classList.remove('menu--active')
-            } else {
-                menu.classList.add('menu--active')
-            }
-            if (lock.classList.contains('lock')) {
-                lock.classList.remove('lock')
-            } else {
-                lock.classList.add('lock')
-            }
-            console.log('нажал на бургер');
-        })
-    </script>
+    <script src="./JS/hamberger.js"></script>
+    <script src="./JS/team.js"></script>
+    
 
 </body>
 
