@@ -8,14 +8,29 @@
 }
 
 .slider__shop{
+    display: flex;
+    width: $containerWidth;
+    overflow: hidden;
+}
+
+.shop__list{
+    display: flex;
+    position: relative;
+    font-size: 30px;
+    right: 0;
+    transition: right .3s;
+}
+
+.slider__shop-btn{
     z-index: $z-slider-shop;  
     width: 100%; 
+    
 }
 
 .slider__shop-left{
     position: absolute;
-    top: 53%;
-    left: -4%;
+    top: 50%;
+    left: -3%;
 
     @include tablets{
         top: 26.2%;
@@ -31,8 +46,8 @@
 .slider__shop-right{
     transform: rotate(-180deg);
     position: absolute;
-    top: 52%;
-    right: 0%;
+    top: 48%;
+    right: -1.5%;
 
     @include tablets{
         top: 25%;
@@ -51,6 +66,7 @@
 }
 
 .shop__item{
+    width: $containerWidth;
     background: #F8FAF9;   
     display: flex;
     flex-wrap: nowrap;
@@ -208,7 +224,7 @@
     flex: 1;
     flex-direction: column;
     flex-wrap: nowrap;
-    max-width: 400px;
+    max-width: 407px;
 
     @include tablets{
         text-align: center;

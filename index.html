@@ -75,9 +75,7 @@
         <!-- <svg class="decor__preview">
             <use xlink:href="./css/svg/decor.svg#rectangle"> </use>
         </svg> -->
-
-      
-
+   
         <nav class="fixed-menu">
             <ul class="fixed-menu__list">
                 <li class="fixed-menu__item fixed-menu__item--active"><a href="" class="fixed-menu__link"></a></li>
@@ -91,6 +89,7 @@
                 <li class="fixed-menu__item"><a href="" class="fixed-menu__link"></a></li>
             </ul>
         </nav>
+
         <section class="advantage">
             <div class="container container--advantage">
                 <div class="advantage__preview">
@@ -147,125 +146,232 @@
 
 
         <section class="shop">
-            <div class="container">
-                <div class="slider__shop">
-                    <a class="slider__shop-left">
+            <div class="container container--shop">
+                <div class="slider__shop-btn">
+                    <a class="slider__shop-left" id="shopLeft">
                         <svg class="slider__shop-icon">
                             <use xlink:href="./scss/svg/sprite.svg#arrow"></use>
                         </svg>
                     </a>
-                    <a class="slider__shop-right">
+                    <a class="slider__shop-right" id="shopRight">
                         <svg class="slider__shop-icon">
                             <use xlink:href="./scss/svg/sprite.svg#arrow"></use>
                         </svg>
                     </a>
                 </div>
-                <ul class="shop__list">
-                    <li class="shop__item">
-                        <div class="shop__img">
-                            <img src="./image/shop/headphones__white.png" alt="" class="shop__headphones">
-                        </div>
-                        <div class="shop__col">
-                            <button class="shop__add">
-                                <svg class="shop__add-icon">
-                                    <use xlink:href="./scss/svg/sprite.svg#add"></use>
-                                </svg>
-                                <div class="shop__add-dropdown">
-                                    <ul class="dropdown__list">
-                                        <li class="dropdown__item">
-                                            <div class="dropdown__item--col">
-                                                <svg class="dropdown__item-icon">
-                                                    <use xlink:href="./scss/svg/sprite.svg#bluetooth"></use>
-                                                </svg>  
-                                                <div class="dropdown__item-feature">Bluetooth</div>
-                                            </div>
-                                            <div class="dropdown__item--col">
-                                                <div class="dropdown__item-feature">4.0</div>
+                <div class="slider__shop">
+                    <ul class="shop__list" id="shopList">
+                        <li class="shop__item">
+                            <div class="shop__img">
+                                <img src="./image/shop/headphones__white.png" alt="" class="shop__headphones">
+                            </div>
+                            <div class="shop__col">
+                                <button class="shop__add">
+                                    <svg class="shop__add-icon">
+                                        <use xlink:href="./scss/svg/sprite.svg#add"></use>
+                                    </svg>
+                                    <div class="shop__add-dropdown">
+                                        <ul class="dropdown__list">
+                                            <li class="dropdown__item">
+                                                <div class="dropdown__item--col">
+                                                    <svg class="dropdown__item-icon">
+                                                        <use xlink:href="./scss/svg/sprite.svg#bluetooth"></use>
+                                                    </svg>  
+                                                    <div class="dropdown__item-feature">Bluetooth</div>
+                                                </div>
+                                                <div class="dropdown__item--col">
+                                                    <div class="dropdown__item-feature">4.0</div>
+                                                </div>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <div class="dropdown__item--col">
+                                                    <svg class="dropdown__item-icon">
+                                                        <use xlink:href="./scss/svg/sprite.svg#road"></use>
+                                                    </svg>  
+                                                    <div class="dropdown__item-feature">Дальность</div>
+                                                </div>
+                                                <div class="dropdown__item--col">
+                                                    <div class="dropdown__item-feature">12 м</div>
+                                                </div>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <div class="dropdown__item--col">
+                                                    <svg class="dropdown__item-icon">
+                                                        <use xlink:href="./scss/svg/sprite.svg#charge"></use>
+                                                    </svg>  
+                                                    <div class="dropdown__item-feature">Зарядка</div>
+                                                </div>
+                                                <div class="dropdown__item--col">
+                                                    <div class="dropdown__item-feature">3 ч</div>
+                                                </div>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <div class="dropdown__item--col">
+                                                    <svg class="dropdown__item-icon">
+                                                        <use xlink:href="./scss/svg/sprite.svg#kg"></use>
+                                                    </svg>  
+                                                    <div class="dropdown__item-feature">Вес</div>
+                                                </div>
+                                                <div class="dropdown__item--col">
+                                                    <div class="dropdown__item-feature">215гр</div>
+                                                </div>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <div class="dropdown__item--col">
+                                                    <svg class="dropdown__item-icon">
+                                                        <use xlink:href="./scss/svg/sprite.svg#patent"></use>
+                                                    </svg>  
+                                                    <div class="dropdown__item-feature">Гарантия</div>
+                                                </div>
+                                                <div class="dropdown__item--col">
+                                                    <div class="dropdown__item-feature">1 год</div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </button>
+                                <h1 class="shop__title">beats solo 3. цвет «атласное серебро»</h1>
+                                <div class="shop__desc">
+                                    <p class="shop__desc-text">
+                                        Беспроводные наушники Beats Solo3 готовы к работе в любой момент. Включите их и
+                                        поднесите к своему iPhone — они мгновенно подключатся к нему.
+                                    </p>
+                                    <ul class="shop-feature__list">
+                                        <li class="shop-feature__item">
+                                            <div class="shop-feature__item-title">
+                                                Зарядка
+                                                <div class="shop-feature__item-desc">
+                                                    2 часа
+                                                </div>
                                             </div>
                                         </li>
-                                        <li class="dropdown__item">
-                                            <div class="dropdown__item--col">
-                                                <svg class="dropdown__item-icon">
-                                                    <use xlink:href="./scss/svg/sprite.svg#road"></use>
-                                                </svg>  
-                                                <div class="dropdown__item-feature">Дальность</div>
-                                            </div>
-                                            <div class="dropdown__item--col">
-                                                <div class="dropdown__item-feature">12 м</div>
-                                            </div>
-                                        </li>
-                                        <li class="dropdown__item">
-                                            <div class="dropdown__item--col">
-                                                <svg class="dropdown__item-icon">
-                                                    <use xlink:href="./scss/svg/sprite.svg#charge"></use>
-                                                </svg>  
-                                                <div class="dropdown__item-feature">Зарядка</div>
-                                            </div>
-                                            <div class="dropdown__item--col">
-                                                <div class="dropdown__item-feature">3 ч</div>
-                                            </div>
-                                        </li>
-                                        <li class="dropdown__item">
-                                            <div class="dropdown__item--col">
-                                                <svg class="dropdown__item-icon">
-                                                    <use xlink:href="./scss/svg/sprite.svg#kg"></use>
-                                                </svg>  
-                                                <div class="dropdown__item-feature">Вес</div>
-                                            </div>
-                                            <div class="dropdown__item--col">
-                                                <div class="dropdown__item-feature">215гр</div>
-                                            </div>
-                                        </li>
-                                        <li class="dropdown__item">
-                                            <div class="dropdown__item--col">
-                                                <svg class="dropdown__item-icon">
-                                                    <use xlink:href="./scss/svg/sprite.svg#patent"></use>
-                                                </svg>  
-                                                <div class="dropdown__item-feature">Гарантия</div>
-                                            </div>
-                                            <div class="dropdown__item--col">
-                                                <div class="dropdown__item-feature">1 год</div>
+                                        <li class="shop-feature__item">
+                                            <div class="shop-feature__item-title">
+                                                Вес
+                                                <div class="shop-feature__item-desc">
+                                                    215 грамм
+                                                </div>
                                             </div>
                                         </li>
                                     </ul>
-                                </div>
-                            </button>
-                            <h1 class="shop__title">beats solo 3. цвет «атласное серебро»</h1>
-                            <div class="shop__desc">
-                                <p class="shop__desc-text">
-                                    Беспроводные наушники Beats Solo3 готовы к работе в любой момент. Включите их и
-                                    поднесите к своему iPhone — они мгновенно подключатся к нему.
-                                </p>
-                                <ul class="shop-feature__list">
-                                    <li class="shop-feature__item">
-                                        <div class="shop-feature__item-title">
-                                            Зарядка
-                                            <div class="shop-feature__item-desc">
-                                                2 часа
-                                            </div>
+                                    <div class="shop__desc-row">
+                                        <div class="shop__desc-price">
+                                            14 990 ₽
                                         </div>
-                                    </li>
-                                    <li class="shop-feature__item">
-                                        <div class="shop-feature__item-title">
-                                            Вес
-                                            <div class="shop-feature__item-desc">
-                                                215 грамм
-                                            </div>
+                                        <div class="buttons buttons__shop">
+                                            <a href="" class="btn btn--theme--red">ЗАКАЗАТЬ</a>
                                         </div>
-                                    </li>
-                                </ul>
-                                <div class="shop__desc-row">
-                                    <div class="shop__desc-price">
-                                        14 990 ₽
-                                    </div>
-                                    <div class="buttons buttons__shop">
-                                        <a href="" class="btn btn--theme--red">ЗАКАЗАТЬ</a>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </li>
-                </ul>
+                        </li>
+                        <li class="shop__item">
+                            <div class="shop__img">
+                                <img src="./image/shop/headphones__red.png" alt="" class="shop__headphones">
+                            </div>
+                            <div class="shop__col">
+                                <button class="shop__add">
+                                    <svg class="shop__add-icon">
+                                        <use xlink:href="./scss/svg/sprite.svg#add"></use>
+                                    </svg>
+                                    <div class="shop__add-dropdown">
+                                        <ul class="dropdown__list">
+                                            <li class="dropdown__item">
+                                                <div class="dropdown__item--col">
+                                                    <svg class="dropdown__item-icon">
+                                                        <use xlink:href="./scss/svg/sprite.svg#bluetooth"></use>
+                                                    </svg>  
+                                                    <div class="dropdown__item-feature">Bluetooth</div>
+                                                </div>
+                                                <div class="dropdown__item--col">
+                                                    <div class="dropdown__item-feature">4.0</div>
+                                                </div>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <div class="dropdown__item--col">
+                                                    <svg class="dropdown__item-icon">
+                                                        <use xlink:href="./scss/svg/sprite.svg#road"></use>
+                                                    </svg>  
+                                                    <div class="dropdown__item-feature">Дальность</div>
+                                                </div>
+                                                <div class="dropdown__item--col">
+                                                    <div class="dropdown__item-feature">10 м</div>
+                                                </div>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <div class="dropdown__item--col">
+                                                    <svg class="dropdown__item-icon">
+                                                        <use xlink:href="./scss/svg/sprite.svg#charge"></use>
+                                                    </svg>  
+                                                    <div class="dropdown__item-feature">Зарядка</div>
+                                                </div>
+                                                <div class="dropdown__item--col">
+                                                    <div class="dropdown__item-feature">2 ч</div>
+                                                </div>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <div class="dropdown__item--col">
+                                                    <svg class="dropdown__item-icon">
+                                                        <use xlink:href="./scss/svg/sprite.svg#kg"></use>
+                                                    </svg>  
+                                                    <div class="dropdown__item-feature">Вес</div>
+                                                </div>
+                                                <div class="dropdown__item--col">
+                                                    <div class="dropdown__item-feature">215гр</div>
+                                                </div>
+                                            </li>
+                                            <li class="dropdown__item">
+                                                <div class="dropdown__item--col">
+                                                    <svg class="dropdown__item-icon">
+                                                        <use xlink:href="./scss/svg/sprite.svg#patent"></use>
+                                                    </svg>  
+                                                    <div class="dropdown__item-feature">Гарантия</div>
+                                                </div>
+                                                <div class="dropdown__item--col">
+                                                    <div class="dropdown__item-feature">1 год</div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </button>
+                                <h1 class="shop__title">beats solo pro. цвет «красный цитрус»</h1>
+                                <div class="shop__desc">
+                                    <p class="shop__desc-text">
+                                        Беспроводные наушники Solo Pro помогают настроиться на творчество. 
+                                        Для этого предусмотрено два режима прослушивания: режим с активным шумоподавлением и Прозрачный режим.
+                                    </p>
+                                    <ul class="shop-feature__list">
+                                        <li class="shop-feature__item">
+                                            <div class="shop-feature__item-title">
+                                                Зарядка
+                                                <div class="shop-feature__item-desc">
+                                                    2 часа
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="shop-feature__item">
+                                            <div class="shop-feature__item-title">
+                                                Вес
+                                                <div class="shop-feature__item-desc">
+                                                    215 грамм
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="shop__desc-row">
+                                        <div class="shop__desc-price">
+                                            14 990 ₽
+                                        </div>
+                                        <div class="buttons buttons__shop">
+                                            <a href="" class="btn btn--theme--red">ЗАКАЗАТЬ</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
             </div>
         </section>
 
@@ -510,10 +616,9 @@
         </section>
     </div>
 
+    <script src="./JS/shop.js"></script>
     <script src="./JS/hamberger.js"></script>
     <script src="./JS/team.js"></script>
-    
-
 </body>
 
 </html>

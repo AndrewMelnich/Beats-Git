@@ -820,14 +820,33 @@ button {
 }
 
 .slider__shop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 940px;
+  overflow: hidden;
+}
+
+.shop__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  font-size: 30px;
+  right: 0;
+  -webkit-transition: right 0.3s;
+  transition: right 0.3s;
+}
+
+.slider__shop-btn {
   z-index: 90;
   width: 100%;
 }
 
 .slider__shop-left {
   position: absolute;
-  top: 53%;
-  left: -4%;
+  top: 50%;
+  left: -3%;
 }
 @media screen and (max-width: 768px) {
   .slider__shop-left {
@@ -846,8 +865,8 @@ button {
   -webkit-transform: rotate(-180deg);
           transform: rotate(-180deg);
   position: absolute;
-  top: 52%;
-  right: 0%;
+  top: 48%;
+  right: -1.5%;
 }
 @media screen and (max-width: 768px) {
   .slider__shop-right {
@@ -868,6 +887,7 @@ button {
 }
 
 .shop__item {
+  width: 940px;
   background: #F8FAF9;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1048,7 +1068,7 @@ button {
           flex-direction: column;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  max-width: 400px;
+  max-width: 407px;
 }
 @media screen and (max-width: 768px) {
   .shop__col {
@@ -1074,7 +1094,7 @@ button {
 }
 @media screen and (max-width: 768px) {
   .shop__desc {
-    max-width: 85%;
+    max-width: 90%;
     text-align: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -1084,7 +1104,7 @@ button {
 }
 @media screen and (max-width: 480px) {
   .shop__desc {
-    max-width: 90%;
+    max-width: 97%;
   }
 }
 
