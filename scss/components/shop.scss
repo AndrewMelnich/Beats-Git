@@ -9,7 +9,7 @@
 
 .slider__shop{
     display: flex;
-    width: $containerWidth;
+    width: 100%;
     overflow: hidden;
 }
 
@@ -22,9 +22,9 @@
 }
 
 .slider__shop-btn{
+    display: flex;
     z-index: $z-slider-shop;  
     width: 100%; 
-    
 }
 
 .slider__shop-left{
@@ -66,10 +66,11 @@
 }
 
 .shop__item{
-    width: $containerWidth;
+    flex-shrink: 0;
+    width: 100%;
     background: #F8FAF9;   
     display: flex;
-    flex-wrap: nowrap;
+    // flex-wrap: nowrap;
     justify-content: center;
     align-items: flex-end;
     padding-left: 29px;
@@ -224,7 +225,7 @@
     flex: 1;
     flex-direction: column;
     flex-wrap: nowrap;
-    max-width: 407px;
+    max-width: 50%;
 
     @include tablets{
         text-align: center;

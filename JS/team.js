@@ -12,6 +12,24 @@ function closeEveryItems(){
     }
 }
 
+for (let index = 0; index < teamName.length; index++) {
+    const button = teamName[index];
+    button.addEventListener('click', function(event) {   
+        const target = event.target; 
+        console.log('target is', target);
+        if (teamName[index].classList.contains('team__name--active') && teamDesc[index].classList.contains('team__desc--active')) {
+            closeEveryItems()
+            console.log('закрыл описание');
+    
+        } else {
+            closeEveryItems()
+            teamDesc[index].classList.add('team__desc--active');
+            teamName[index].classList.add('team__name--active');
+            console.log('открыл описание');
+        }
+    });
+}
+
 // List.addEventListener('click', function(event) {   
 //     const target = event.target; 
 //     console.log('target is', target);
@@ -28,26 +46,6 @@ function closeEveryItems(){
 //     }
 
 // });
-
-for (let index = 0; index < teamName.length; index++) {
-    const button = teamName[index];
-    
-    button.addEventListener('click', function(event) {   
-        const target = event.target; 
-        console.log('target is', target);
-        if (teamName[index].classList.contains('team__name--active') && teamDesc[i].classList.contains('team__desc--active')) {
-            closeEveryItems()
-            console.log('закрыл описание');
-    
-        } else {
-            closeEveryItems()
-            teamDesc[index].classList.add('team__desc--active');
-            teamName[index].classList.add('team__name--active');
-            console.log('открыл описание');
-        }
-    });
-}
-
 
 // for (let i = 0; i < teamName.length; i++) {
 //     const button = teamName[i];
