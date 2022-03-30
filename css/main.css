@@ -422,6 +422,7 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border: 1px solid black;
 }
 .team__main {
   display: -webkit-box;
@@ -431,6 +432,7 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  height: 100%;
 }
 
 .team .team__title {
@@ -598,7 +600,14 @@ button {
   }
 }
 .team__desc--active {
-  max-height: 100%;
+  max-height: 8.125rem;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+@media screen and (max-width: 768px) {
+  .team__desc--active {
+    max-height: 25rem;
+  }
 }
 
 .team__desc-profession {
@@ -621,8 +630,7 @@ button {
   font-size: 16px;
   line-height: 19px;
   color: #666;
-  margin-bottom: 20px;
-  padding: 0 20%;
+  margin-bottom: 10px;
 }
 @media screen and (max-width: 768px) {
   .team__desc-text {

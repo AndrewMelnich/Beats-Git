@@ -1,6 +1,5 @@
 const teamName = document.querySelectorAll('.team__name');
 const teamDesc = document.querySelectorAll('.team__desc');
-// let List = document.getElementById('teamList');
 
 function closeEveryItems(){
     for (let i = 0; i < teamName.length; i++) {
@@ -15,17 +14,13 @@ function closeEveryItems(){
 for (let index = 0; index < teamName.length; index++) {
     const button = teamName[index];
     button.addEventListener('click', function(event) {   
-        const target = event.target; 
-        console.log('target is', target);
+
         if (teamName[index].classList.contains('team__name--active') && teamDesc[index].classList.contains('team__desc--active')) {
             closeEveryItems()
-            console.log('закрыл описание');
-    
         } else {
             closeEveryItems()
             teamDesc[index].classList.add('team__desc--active');
             teamName[index].classList.add('team__name--active');
-            console.log('открыл описание');
         }
     });
 }
