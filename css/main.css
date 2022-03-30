@@ -497,6 +497,8 @@ button {
   max-height: 290px;
   margin-bottom: 17px;
   display: inline-block;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media screen and (max-width: 768px) {
   .team__item-photo {
