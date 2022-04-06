@@ -1,0 +1,136 @@
+.choise{
+    position: relative;
+    background: url(../../image/choise/cover-2.jpg) center center/cover no-repeat;
+    color: #FFFFFF;
+}
+
+.choise__title{
+    color: #FFFFFF;
+    font-family: 'Play';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 52px;
+    margin-top: 10.8%;
+    margin-left: 7.8%;
+
+    @include tablets{
+        margin-top: 11.8%;
+        margin-left: 5%;
+    }
+
+    @include phones{
+        font-size: 32px;
+        line-height: 36px;
+        margin-top: 16%;
+    }
+}
+
+.choise__list{
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    justify-content: flex-end;
+
+    @include phones{
+        width: 100%;
+        // justify-content: flex-end;
+
+        .menu__item.active{
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 10;
+        }
+    }
+}
+
+.choise__item{
+    display: flex;
+
+    &:nth-child(2){
+        .choise__button{
+            background-color: #151515;
+        }  
+    }
+    &:nth-child(3){
+        .choise__button{
+            background-color: #E01F3C;
+        }  
+    }
+
+    @include phones{
+        &--active{
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 10;
+        }
+    }
+}
+
+.choise__button{
+    color: #FFFFFF;
+    width: 102px;
+    background: #999999;
+    position: relative;
+    border: none;
+
+    @include phones{
+        width: 90px;
+    }
+}
+
+.choise__button-text{
+    position: absolute;
+    transform: rotate(-90deg) translateY(-50%);
+    transform-origin: 0 0;
+    left: 50%;
+    bottom: 34px;
+    white-space: nowrap;
+    font-family: 'Alegreya Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 43px;
+
+    @include phones{
+        bottom: 5px;
+    }
+}
+
+.choise__content{
+    background: rgba(51, 53, 55, 0.9);
+    backdrop-filter: blur(10px);
+    width: 0px;
+    overflow: hidden;
+    transition: width 0.3s linear;
+
+    // &--active{
+    //     width: 524px;
+    // }
+}
+
+.choise__content--active .choise__content{
+    width: 524px;
+}
+
+.choise__desc{
+    width: 90%;
+    padding: 4%;
+    font-family: 'Alegreya Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16.0138px;
+    line-height: 24px;
+    color: #FFFFFF;
+    transition: opasity 0.3s linear;
+    transition-delay: 0.3s;
+}

@@ -1,13 +1,20 @@
 .team {
     display: flex;
     align-items: center;
+    
 
-    border: 1px solid black;
+    // border: 1px solid black;
 
     &__main {
         display: flex;
         flex-direction: column;
-        height: 100%;
+        min-height: 450px;
+        // height: 100vh;
+        // min-height: rem(650px);
+
+        @include tablets{
+            min-height: 100%;
+        }
     }
 }
 

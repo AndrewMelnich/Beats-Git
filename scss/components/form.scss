@@ -130,6 +130,10 @@
             height: 4.6rem;
         }
     }
+
+    &--error{
+        border: rem(3px) solid red;
+    }
 }
 
 .form__controls {
