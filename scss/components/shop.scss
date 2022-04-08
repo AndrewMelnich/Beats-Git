@@ -41,12 +41,12 @@
 }
 
 .shop{
-    // position: relative;
     justify-content: center;
     flex-direction: column;
-    // display: flex;
     background: #F8FAF9;
-    padding: 64px 0 96px;
+    display: flex;
+    align-items: center;
+    
 }
 
 .slider__shop{
@@ -59,6 +59,7 @@
         border: 0;
         background: transparent;
         box-shadow: none;
+        margin-bottom: 0;
     }
 }
 
@@ -192,7 +193,6 @@
 }
 
 .dropdown__item-icon{
-    
     width: 24px;
     height: 24px;
     margin-right: 17px;

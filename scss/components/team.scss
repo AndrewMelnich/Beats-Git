@@ -1,7 +1,9 @@
 .team {
     display: flex;
     align-items: center;
-    
+    justify-content: center;
+    height: 100vh;
+    min-height: 40.625rem;
 
     // border: 1px solid black;
 
@@ -154,23 +156,34 @@
 }
 
 .team__desc{
-    max-height: 0;
+    // max-height: 0;
+    max-height: 100%;
+    opacity: 0;
     overflow: hidden;
-    transition: 0.3s ease;
+    transition: 0.5s ease;
     
 
     @include tablets{
         transition: 0.3s;
         padding: 0 15%;
+        max-height: 0;
+
+        &--active{
+            opacity: 1;
+            max-height: rem(130px); 
+            transition: 0.2s ease; 
+            max-height: rem(400px);
+        }
     }
 
     &--active{
-        max-height: rem(130px); 
-        transition: 0.3s ease; 
+        opacity: 1;
+        // max-height: rem(130px); 
+        transition: 0.2s ease; 
 
-        @include tablets {
-           max-height: rem(400px);
-        }
+        // @include tablets {
+        //    max-height: rem(400px);
+        // }
     }
 }
 
