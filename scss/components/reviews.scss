@@ -150,11 +150,11 @@
 .interactive__avatar{
     
     border: rem(4px) solid transparent;
-    
+    border-radius: 50%;
     overflow: hidden;
 
     &:hover{
-        border: rem(2px) solid red;
+        border: rem(4px) solid red;
     }
 
     &--active{
@@ -166,6 +166,10 @@
     }
 
     
+}
+
+.reviews-user__avatar{
+    border-radius: 50%;
 }
 
 .interactive__avatar-img{

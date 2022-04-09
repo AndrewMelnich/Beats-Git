@@ -435,8 +435,7 @@
                             </li>
                         </ul>
                     </div>
-                </div>
-                
+                </div> 
             </section>
     
             <section data-section-id="choise" class="choise">
@@ -484,7 +483,6 @@
                         </li>
                     </ul>
                 </div>
-                
             </section>
     
             <section data-section-id="reviews" class="reviews">
@@ -537,7 +535,7 @@
                         <li class="reviews-users__item interactive__avatar interactive__avatar--active" data-open="#one">
                             <a class="reviews-user__link">
                                 <div class="reviews-user__link-img">
-                                    <img src="./image/reviews/avatars/billy.png" alt="" class="interactive__avatar-img" >
+                                    <img src="./image/reviews/avatars/billy.png" alt="" class="reviews-user__avatar interactive__avatar-img" >
                                 </div>
                             </a>
                         </li>
@@ -557,21 +555,46 @@
                         </li>
                     </ul>
                 </div>
+            </section>
     
-            </section> --> -->
-    
-            <section class="video" data-section-id="video">
-                <div class="container container--video">
-                    <h1 class="video__title">Как мы работаем</h1>
-                    <div class="player__wrapper">
-                        <div class="player play">
-                            <div class="player__elem" id="yt-player"></div>
-                            <div class="player__splash">
+            <section class="video" id="video" data-section-id="video">
+                <div class="container video__container">
+                    <h1 class="title video__title title--color--black">Как мы работаем</h1>
+                    <div class="video__wrapper">
 
-                            </div>
+                        <div class="video__player">
+
+                            <video id="player" src="video/video2.mp4" >
+                                <source src="video/video2.mp4" type='video.mp4'>
+                            </video>
+
+                            <button class="video__player-img">
+                                <img src="./image/video/play.svg" alt="play" class="play video__btn-img">
+                            </button>
+
                         </div>
-                        <div class="player__controls">
 
+                        <div class="player__controls">                            
+                            <div class="duration">
+                                <div class="duration__btn-wrap">
+                                    <button class="play duration__img">
+                                        <!-- <img src="./image/icons/volume.svg" alt="" class="sound__mic"> -->
+                                    </button>
+                                </div>
+                                <div class="duration__length-wrap">
+                                    <input type="range" class="duration__length" id="durationLevel">
+                                </div>
+                            </div>
+
+                            <div class="sound" id="soundBtn">
+                                <button class="sound__btn">
+                                    <img src="./image/icons/volume.svg" alt="" class="sound__mic" id="dynamic">
+                                </button>
+                                <div class="sound__volume">
+                                    <input type="range" class="duration__length duration__length--other"
+                                     id="micLevel">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -736,11 +759,9 @@
     <script src="./JS/hamberger.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>   -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>   
 
-    <script src="./JS/ops.js"></script>
-    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-    <script src="./JS/shop.js"></script>
+    
 
     <script src="./JS/team.js"></script>
     <script src="./JS/choise.js"></script>
@@ -754,7 +775,12 @@
 
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
     <script src="./JS/map.js"></script>
-    
+
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.5/mobile-detect.min.js"></script>
+    <script src="./JS/shop.js"></script>
+    <script src="./JS/ops.js"></script>
+
 </body>
 
 </html>

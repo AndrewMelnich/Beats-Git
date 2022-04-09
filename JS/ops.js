@@ -2,6 +2,10 @@ const sections = $('section');
 const display = $('.maincontent');
 const sideMenu = $('.fixed-menu');
 const menuItems = sideMenu.find('.fixed-menu__item');
+
+const mobileDetect = new MobileDetect(window.navigator.userAgent);
+const isMobile = mobileDetect.mobile();
+
 let inScroll = false;
 
 sections.first().addClass('active');
@@ -12,14 +16,14 @@ const counSectionPosition = sectionEq => {
     if (isNaN(position)){
         console.error("передано не верное значение в counSectionPosition");
         return 0;
-    }
+    };
 
     return position;
-}
+};
 
 const resetActiveClassForItem = (items, itemEq, activeClass) => {
     items.eq(itemEq).addClass(activeClass).siblings().removeClass(activeClass);
-}
+};
 
 const performTransition = sectionEq => {
     if (inScroll) return
@@ -42,7 +46,7 @@ const performTransition = sectionEq => {
         resetActiveClassForItem(menuItems, sectionEq, 'fixed-menu__item--active'); 
     }, transitionOver + mouseInertiaOver);
     
-}
+};
 
 const vieportScroller = () => {
 const activeSection = sections.filter(".active");
@@ -77,7 +81,7 @@ $(window).on('wheel', e =>{
         // scrollVieport('prev');
     }
     console.log(deltaY);
-})
+});
 
 $(window).on("keydown", (e)=>{
     const tagName = e.target.tagName.toLowerCase();
@@ -93,8 +97,7 @@ $(window).on("keydown", (e)=>{
         case 40:
             scroller.next();;
             break;
-    } 
-    
+    };
 });
 
 $("[data-scroll-to]").click(e =>{
@@ -104,21 +107,22 @@ $("[data-scroll-to]").click(e =>{
     const target = $this.attr('data-scroll-to');
     const reqSection = $(`[data-section-id=${[target]}]`);
 
-
     performTransition(reqSection.index());
 });
 
-//https://github.com/mattbryson/TouchSwipe-Jquery-Plugin
 
-// $(function() {
-//     $("body").swipe( {
-//       //Generic swipe handler for all directions
-//       swipe:function(event, direction, 
-//         ) {
-//         alert(direction);
-//       }
-//     });
-  
-//     //Set some options later
-//     // $("#test").swipe( {fingers:2} );
-//   });
+
+if (isMobile){
+   //https://github.com/mattbryson/TouchSwipe-Jquery-Plugin
+    $("body").swipe ({
+        swipe: function(event, direction) {
+            const scroller = vieportScroller();
+            let scrollDirection = "";
+
+            if (direction === "up") scrollDirection = "next";
+            if (direction === "down") scrollDirection = "prev";
+
+            scroller[scrollDirection]();
+        }
+    });   
+}
