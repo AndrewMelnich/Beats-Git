@@ -106,8 +106,13 @@ task('icons', () => {
 });
 
 task('img', () => { // таск для подключения картинок 
-  return src('src/images/**')
-      .pipe(dest('dist/img'))
+  return src('src/images/**/*.*')
+      .pipe(dest('dist/image'))
+});
+
+task('video', () => { // таск для подключения видео 
+  return src('src/video/**')
+      .pipe(dest(`${DIST_PATH}/video`));
 });
  
 task('server', () => {
@@ -131,7 +136,7 @@ task('watch', () => {
 task('default',
  series(
    'clean',
-   parallel('copy:html', 'styles', 'scripts', 'icons'),
+   parallel('copy:html', 'styles', 'scripts', 'icons', 'img'),
    parallel('watch', 'server')
  )
 );
@@ -139,5 +144,5 @@ task('default',
 task('build',
  series(
    'clean',
-   parallel('copy:html', 'styles', 'scripts', 'icons'))
+   parallel('copy:html', 'styles', 'scripts', 'icons', 'img'))
 );

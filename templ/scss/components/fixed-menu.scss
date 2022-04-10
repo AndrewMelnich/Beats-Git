@@ -1,0 +1,56 @@
+.fixed-menu{
+    position: fixed;
+    top: 30%;
+    right: 3%;  
+    z-index: $z-fixed-menu;
+
+    @include tablets {
+        display: none;
+    }
+}
+
+.fixed-menu__item{
+    margin-bottom: rem(5px);
+    
+    &--active{
+        .fixed-menu__link{
+            border-color: #E01F3D;
+            
+            &:before{
+                content: "";
+                display: block;
+                width: rem(8px);
+                height: rem(8px);
+                border-radius: 50%;
+                background: #E01F3D;        
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}
+
+.fixed-menu__link{
+    position: relative;
+    display: block;
+    height: rem(18px);
+    width: rem(18px);
+    border-radius: 50%;
+    border: rem(1px) solid transparent; 
+
+    &:before{
+        content: "";
+        display: block;
+        width: rem(8px);
+        height: rem(8px);
+        border-radius: 50%;
+        background: #666666;        
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+

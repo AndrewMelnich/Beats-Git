@@ -1,0 +1,143 @@
+.advantage{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    min-height: rem(650px);
+    position: relative;
+}
+
+.container--advantage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+
+    &::before{
+        content: url(../image/decor/Triangle.svg);
+        position: absolute;
+        bottom: -2.5%;
+        left: -2%;
+
+        @include tablets{
+            left: 5%;
+            bottom: -3%;
+        }
+    }
+
+    @include tablets{
+        width: 99%;
+    }
+
+    @include phones{
+        width: 97%;
+    }
+}
+
+.advantage__preview{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding: 0 18%;
+    margin-bottom: rem(62px);
+
+    @include tablets{
+        padding: 0 12%;
+        margin-bottom: rem(53px);
+    }
+
+    @include phones{
+        padding: 0 5%;
+        margin-bottom: rem(55px);
+    }
+}
+
+.advantage__title{
+    margin-bottom: rem(18px);
+
+    @include phones{
+        margin-bottom: rem(11px);
+    }
+}
+
+.advantage__list{
+    display: flex;
+    text-align: center;
+
+    @include phones{
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+.advantage__item{
+    flex: 1;
+    position: relative;
+    padding: 0 4%;
+
+
+    &::before{
+        position: absolute;
+        content: url(../image/advantage/decor.svg);
+        top: rem(62px);
+        right: 0;
+        transform: translate(50%);
+        
+        @include tablets{
+            display: none;
+        }
+    }
+    
+    &:last-child{
+        padding-right: rem(0px);
+
+        &::before{
+            display: none;
+        }
+    }
+
+    &:first-child{
+        padding-left: rem(0px);
+    }
+
+    @include tablets{
+        padding: 0 0.4%;
+    }
+
+    @include phones{
+        display: flex;
+        align-items: center;
+        text-align: start;
+        padding: 0;
+        margin-bottom: rem(46px);
+    }
+}
+
+.advantage__item-img{
+    display: flex;
+    text-align: center;
+    flex-shrink: 0;
+    width: rem(128px);
+    height: rem(120px);
+    border-radius: 50%;
+    background: #F2F5F4;
+    padding: rem(30px);
+    margin: 0 auto rem(30px);
+
+    @include phones {
+        margin-right: rem(12px);
+        margin-bottom: 0;
+    }
+}
+
+.advantage__text-title{
+    margin-bottom: rem(7px);
+
+    @include tablets{
+        margin-bottom: 1rem;
+    }
+
+    @include phones {
+        margin-bottom: 5px;
+    }
+}

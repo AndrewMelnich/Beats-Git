@@ -1,0 +1,222 @@
+.inner-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #181818;
+    height: 100vh;
+    min-height: rem(650px);
+    padding: rem(70px) 0;
+
+    @include tablets {
+        display: flex;
+        justify-content: center;
+        
+    }    
+}
+
+.inner-form-decor{
+    width: rem(50px);
+    height: rem(50px);
+    position: absolute;
+    bottom: -202%;
+    right: 5%;  
+    transform: rotate(-15deg);
+
+}
+
+.form__title {
+    font-family: Play;
+    font-style: normal;
+    font-weight: normal;
+    font-size: $baseFontsSize;
+    line-height: 19px;
+    color: #fff;
+
+}
+
+.section__title {
+    color: #fff;
+    text-align: center;
+    margin-right: auto;
+    margin-bottom: rem(58px);
+
+    @include tablets {
+        margin-bottom: rem(30px);
+    }
+
+    @include phones{
+        margin-bottom: 39px;
+    }
+}
+
+.form {
+    display: flex;
+
+    @include tablets {
+        flex-direction: column;
+        // padding: 0 18%;
+        max-width: 466px;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    @include phones {
+        flex-direction: column;
+        padding: 0;
+    }
+}
+
+.form__col {
+    flex: 1;
+    margin-right: rem(35px);
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    @include tablets {
+        margin-right: 0;
+    }
+}
+
+.form__row {
+    display: flex;
+    margin-bottom: rem(11px);
+}
+
+.form__title {
+    margin-bottom: rem(6px);
+}
+
+.form__row—textarea {
+    margin-bottom: rem(33px);
+    // padding: 5px;
+
+    @include tablets {
+        margin-bottom: 13px;
+    }
+}
+
+.form__block {
+    flex: 1;
+    margin-right: rem(15px);
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.form__input {
+    width: 100%;
+    border-radius: rem(5px);
+    border: rem(3px) solid transparent;
+    padding: rem(18px) rem(12px);
+
+    &--textarea {
+        height: rem(152px);
+        resize: none;
+    }
+
+    &:focus {
+        border: rem(3px) solid #E01F3D;
+        outline: none;
+    }
+
+    @include tablets {
+        padding: 5px;
+        margin-bottom: rem(8px);
+
+        &--textarea {
+            height: 4.6rem;
+        }
+    }
+
+    &--error{
+        border: rem(3px) solid red;
+    }
+}
+
+.form__controls {
+    display: flex;
+    flex-wrap: wrap;
+
+    &:last-child {
+        margin-bottom: rem(69px);
+    }
+
+    @include phones {
+        justify-content: center;
+    }
+}
+
+.radio {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    user-select: none;
+    margin-right: rem(16px);
+    margin-bottom: rem(18px);
+
+    &--checkbox {
+        .radio__visible {
+            border-radius: rem(5px);
+
+            &::before {
+                background: url(../image/icons/ok.svg) center center no-repeat;
+            }
+        }
+    }
+
+}
+
+.radio__title {
+    font-family: Play;
+    font-style: normal;
+    font-weight: normal;
+    font-size: $baseFontsSize;
+    line-height: 19px;
+    color: #fff;
+}
+
+
+.radio__elem {
+    display: none;
+
+
+    &:checked~.radio__visible {
+        &::before {
+            display: block;
+        }
+    }
+}
+
+.radio__visible {
+    width: rem(25px);
+    height: rem(25px);
+    border-radius: 50%;
+    position: relative;
+    background-color: #fff;
+    margin-right: rem(10px);
+
+    &::before {
+        content: "";
+        display: none;
+        width: rem(13px);
+        height: rem(13px);
+        border-radius: 50%;
+        background-color: #E01F3D;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.form__btn {
+    margin-top: rem(30px);
+
+    @include tablets {
+        text-align: center;
+        margin-top: 1.375rem;
+    }
+}

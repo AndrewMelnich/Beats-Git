@@ -1,0 +1,24 @@
+.fixed-menu {
+  position: fixed;
+  top: 20%;
+  right: 3%;
+}
+
+.fixed-menu__item {
+  margin-bottom: 5px;
+}
+.fixed-menu__item:hover {
+  background: #E01F3D;
+}
+.fixed-menu__item--active {
+  border-color: #E01F3D;
+  opacity: 1;
+}
+
+.fixed-menu__link {
+  display: block;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+}
