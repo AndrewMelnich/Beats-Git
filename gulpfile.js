@@ -121,3 +121,4 @@ task('build',
    'clean',
    parallel('copy:html', 'styles', 'scripts', 'icons'))
 );
+а
