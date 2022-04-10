@@ -21,7 +21,7 @@ const env = process.env.NODE_ENV;
  
 const {SRC_PATH, DIST_PATH, STYLE_LIBS, JS_LIBS} = require('./gulp.config');
  
-sass.compiler = require('node-sass');
+// sass.compiler = require('node-sass');
  
 task('clean', () => {
  return src(`${DIST_PATH}/**/*`, { read: false })
@@ -40,7 +40,7 @@ task('styles', () => {
    .pipe(concat('main.min.scss'))
    .pipe(sassGlob())
    .pipe(sass().on('error', sass.logError))
-   .pipe(px2rem())
+  //  .pipe(px2rem())
    .pipe(gulpif(env === 'prod', autoprefixer({
        browsers: ['last 2 versions'],
        cascade: false
@@ -88,7 +88,26 @@ task('icons', () => {
   //      }
   //    }
   //  }))
+
+  
    .pipe(dest(`${DIST_PATH}/images/icons`));
+});
+
+task('icons', () => {
+  return src('src/icons-svg/*.svg')
+      .pipe(svgSprite({ // спрайт svg
+          mode: {
+              symbol: {
+                  sprite: '../sprite.svg'
+              }
+          }
+      }))
+      .pipe(dest('dist/icons-svg'));
+});
+
+task('img', () => { // таск для подключения картинок 
+  return src('src/images/**')
+      .pipe(dest('dist/img'))
 });
  
 task('server', () => {
@@ -105,6 +124,7 @@ task('watch', () => {
  watch('./src/*.html', series('copy:html'));
  watch('./src/scripts/*.js', series('scripts'));
  watch('./src/images/**/*.svg', series('icons'));
+ watch('./src/img/**', series('img')); // слежка за папкой img
 });
  
  
@@ -121,4 +141,3 @@ task('build',
    'clean',
    parallel('copy:html', 'styles', 'scripts', 'icons'))
 );
-а
