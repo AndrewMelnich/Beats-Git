@@ -3,6 +3,7 @@
     flex-direction: column;
     height: 100vh;
     min-height: rem(650px);
+    position: relative;
 }
 
 .container--advantage{
@@ -10,6 +11,18 @@
     flex-direction: column;
     justify-content: center;
     height: 100%;
+
+    &::before{
+        content: url(../../image/decor/Triangle.svg);
+        position: absolute;
+        bottom: -2.5%;
+        left: -2%;
+
+        @include tablets{
+            left: 5%;
+            bottom: -3%;
+        }
+    }
 
     @include tablets{
         width: 99%;

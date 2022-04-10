@@ -17,3 +17,11 @@ hamburger.addEventListener('click', e => {
     }
 })
 
+menu.addEventListener('click', e => {
+    e.preventDefault();
+    hamburger.classList.remove('hamburger--active');
+    menu.classList.remove('menu--active');
+    lock.classList.remove('lock');
+    console.log('close бургер =|');
+})
+

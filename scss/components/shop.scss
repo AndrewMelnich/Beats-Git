@@ -46,13 +46,22 @@
     background: #F8FAF9;
     display: flex;
     align-items: center;
+    position: relative;
+    &::before{
+        content: url(../../image/decor/Foursquare.svg);
+        position: absolute;
+        bottom: -3%;
+        right: 4.5%;
+
+        @include tablets{
+            bottom: -2%;
+            right: 4.4%;
+        }
+    }
     
 }
 
 .slider__shop{
-    // display: flex;
-    // width: 100%;
-    // overflow: hidden;
     position: relative;
 
     .bx-wrapper{
@@ -64,13 +73,7 @@
 }
 
 .shop__list{
-    // display: flex;
-    // justify-content: space-between;
-    // position: relative;
-    // width: 100%; 
     font-size: 30px;
-    // right: 0;
-    // transition: right .3s;
 }
 
 

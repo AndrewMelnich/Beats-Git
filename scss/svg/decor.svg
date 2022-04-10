@@ -1,16 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg"  fill="none">
-    <symbol id="rectangle" viewBox="0 0 41 41"> 
+    <!-- <symbol id="rectangle" viewBox="0 0 41 41"> 
             <rect y="32.7561" width="46.3241" height="10.383" transform="rotate(-45 0 32.7561)" 
             fill="#C4C4C4"/>
             <!-- width="41" height="41" -->
+    </symbol> -->
+    <symbol id="decor" viewBox="0 0 972 3956" fill="none">
+        <!-- width="972" height="3956" > -->
+        <rect x="950.675" y="1303" width="24" height="24" transform="rotate(29.1093 950.675 1303)" fill="#292929"/>
+        <path d="M913.711 3900.23L941.494 3910.9L939.937 3940.62L911.191 3948.32L894.982 3923.36L913.711 3900.23Z" fill="#E01F3D"/>
+        <rect x="874" y="32.7561" width="46.3241" height="10.383" transform="rotate(-45 874 32.7561)" fill="#C4C4C4"/>
+        <circle cx="38.5" cy="3273.5" r="17.5" fill="#868686"/>
+        <path d="M12.5 651.5L1 685.5L35.5 675L12.5 651.5Z" fill="#E01F3D" stroke="#E01F3D"/>
     </symbol>
-
-
-
-
-
-
-
-
 </svg>
  

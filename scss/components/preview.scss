@@ -1,5 +1,6 @@
 .preview{
     background-color: #F5F5F5;
+    position: relative;
     display: flex;
     height: 100vh;
     min-height: rem(650px);
@@ -12,6 +13,18 @@
     height: 100%; 
     padding: rem(24px) 0; 
     background: url(../image/preview/headphones1100.svg) right center / 50% auto no-repeat;
+
+    &::before{
+        content: url(../../image/decor/Rectangle.svg);
+        position: absolute;
+        bottom: -4%;
+        right: 5%;
+
+        @include tablets{
+            bottom: -3%;
+            right: 8.4%;
+        }
+    }
 
     @include tablets{
         background: none;
