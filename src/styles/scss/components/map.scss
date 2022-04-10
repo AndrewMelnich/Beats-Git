@@ -1,0 +1,19 @@
+.map{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   
+}
+
+#map{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.map__container{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
