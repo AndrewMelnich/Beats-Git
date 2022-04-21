@@ -43,7 +43,7 @@
     "sass": "^1.50.0"
   },
   "dependencies": {
-    "jquery": "^3.6.0",
+    "dart-sass": "^1.25.0",
     "normalize.css": "^8.0.1"
   }
 }

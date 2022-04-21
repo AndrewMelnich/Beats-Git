@@ -1,7 +1,7 @@
 const { src, dest, task, series, watch, parallel } = require("gulp");
 const rm = require('gulp-rm');
 // const sass = require('gulp-sass');
-const sass = require('gulp-sass')(require('sass'));
+const sass = require('gulp-sass')(require('dart-sass'));
 const concat = require('gulp-concat');
 const browserSync = require('browser-sync').create();
 const reload = browserSync.reload;
@@ -58,7 +58,7 @@ const libs = [
 ];
  
 task('scripts', () => {
- return src([...JS_LIBS, 'src/scripts/*.js'])
+ return src(['src/scripts/*.js'])
    .pipe(gulpif(env === 'dev', sourcemaps.init()))
    .pipe(concat('main.min.js', {newLine: ';'}))
    .pipe(gulpif(env === 'prod', babel({
@@ -71,7 +71,7 @@ task('scripts', () => {
 });
  
 task('icons', () => {
- return src('src/images/**/*.svg')
+ return src('src/image/**/*.svg')
    .pipe(svgo({
      plugins: [
        {
@@ -106,13 +106,14 @@ task('icons', () => {
 });
 
 task('img', () => { // таск для подключения картинок 
-  return src('src/images/**/*.*')
+  return src('src/image/**/*.*')
       .pipe(dest('dist/image'))
 });
 
 task('video', () => { // таск для подключения видео 
-  return src('src/video/**')
-      .pipe(dest(`${DIST_PATH}/video`));
+  return src('src/video/*.*')
+      .pipe(dest('dist/video'));
+      // .pipe(dest('${DIST_PATH}/video'));
 });
  
 task('server', () => {
@@ -128,7 +129,7 @@ task('watch', () => {
  watch('./src/styles/**/*.scss', series('styles'));
  watch('./src/*.html', series('copy:html'));
  watch('./src/scripts/*.js', series('scripts'));
- watch('./src/images/**/*.svg', series('icons'));
+ watch('./src/image/**/*.svg', series('icons'));
  watch('./src/img/**', series('img')); // слежка за папкой img
 });
  
@@ -136,7 +137,7 @@ task('watch', () => {
 task('default',
  series(
    'clean',
-   parallel('copy:html', 'styles', 'scripts', 'icons', 'img'),
+   parallel('copy:html', 'video', 'styles', 'scripts', 'icons', 'img'),
    parallel('watch', 'server')
  )
 );
@@ -144,5 +145,5 @@ task('default',
 task('build',
  series(
    'clean',
-   parallel('copy:html', 'styles', 'scripts', 'icons', 'img'))
+   parallel('copy:html', 'video', 'styles', 'scripts', 'icons', 'img'))
 );

@@ -8,8 +8,6 @@ $colorRed: #E01F3D;
 $tablets: 768px;
 $phones: 480px;
 
-@import "components/media.scss";
-
 //z-inexes
 $z-fixed-menu: 100;
 $z-slider-shop: 90;
@@ -19,6 +17,8 @@ $z-slider-shop: 90;
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&display=swap');
 
 // components
+@import "components/media.scss";
+
 @import "components/base.scss";
 @import "components/decor.scss";
 @import "components/_header.scss";
@@ -35,3 +35,6 @@ $z-slider-shop: 90;
 @import "components/footer.scss";
 @import "components/fixed-menu.scss";
 @import "components/menu.scss";
+
+
+
